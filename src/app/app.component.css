@@ -1,0 +1,17 @@
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    margin: 5px;
+    padding: 3px;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+}
+
+.menu a.active {
+    color: white;
+    background-color: black;
+}
