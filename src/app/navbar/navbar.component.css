@@ -1,0 +1,35 @@
+.logo {
+    cursor: pointer;
+    float: left;
+    position: absolute;
+}
+
+.menu {
+    left: 80vw;
+    position: absolute;
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.nav {
+    background-color: rgb(109, 153, 200);
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    padding: 0 10px;
+    position: relative;
+}
+
+.nav a.active {
+    border: 1px solid white;
+}
+
+.nav a:hover {
+    background-color: #fff;
+}
