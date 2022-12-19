@@ -1,0 +1,19 @@
+<!-- <div *ngIf="!isSeller" class="loginNav">
+    <app-admin-nav></app-admin-nav>
+</div> -->
+<div *ngIf="isSeller" class="container">
+    <button (click)="adminLogout()">Logout</button>
+    <fieldset>
+        <legend>Add Product</legend>
+
+        <form autocomplete="off">
+            <label for="prodImage">Product Image Url:</label>
+            <input type="url" name="prodImage" [(ngModel)]="registeredProductData.prodImage"><br /><br />
+            <label for="prodTitle">Product Title:</label>
+            <input type="text" name="prodTitle" [(ngModel)]="registeredProductData.prodTitle"><br /><br />
+            <label for="prodPrice">Product Price(Rs.):</label>
+            <input type="number" name="prodPrice" [(ngModel)]="registeredProductData.prodPrice"><br /><br />
+            <button (click)="addProduct()">Submit</button>
+        </form>
+    </fieldset>
+</div>

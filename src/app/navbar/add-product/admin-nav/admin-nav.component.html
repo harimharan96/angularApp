@@ -1,0 +1,35 @@
+<div class="nav">
+    <a (click)="login()">Seller Login</a>
+    <a (click)="login()">Seller Sign up</a>
+</div>
+<div *ngIf="isLogin" class="login">
+    <fieldset>
+        <legend>Seller Login</legend>
+
+
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" name="email" [(ngModel)]="loginSellerData.email"><br /><br />
+            <label for="password">Password:</label>
+            <input type="password" name="password" [(ngModel)]="loginSellerData.password"><br /><br />
+            <button (click)="loginSeller()">Submit</button>
+        </form>
+    </fieldset>
+</div>
+<div *ngIf="!isLogin" class="signUp">
+    <fieldset>
+        <legend>Seller Sign up</legend>
+
+        <form>
+            <label for="fName">First Name:</label>
+            <input type="text" name="fName" [(ngModel)]="registerSellerData.fName"><br /><br />
+            <label for="lName">Last Name:</label>
+            <input type="text" name="lName" [(ngModel)]="registerSellerData.lName"><br /><br />
+            <label for="email">Email:</label>
+            <input type="email" name="email" [(ngModel)]="registerSellerData.email"><br /><br />
+            <label for="password">Password:</label>
+            <input type="password" name="password" [(ngModel)]="registerSellerData.password"><br /><br />
+            <button (click)="registerSeller()">Submit</button>
+        </form>
+    </fieldset>
+</div>

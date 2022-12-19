@@ -1,16 +1,17 @@
 <div class="container">
     <fieldset>
         <legend>Registration Form</legend>
-        <form #registerForm="ngForm" (ngSubmit)="registerUser(registerForm.value)">
+        <!-- <form #registerForm="ngForm" (ngSubmit)="registerUser(registerForm.value)"> -->
+        <form>
             <label for="fName">First Name:</label>
-            <input type="text" name="fName" ngModel><br /><br />
+            <input type="text" name="fName" [(ngModel)]="registerUserData.fName"><br /><br />
             <label for="lName">Last Name:</label>
-            <input type="text" name="lName" ngModel><br /><br />
+            <input type="text" name="lName" [(ngModel)]="registerUserData.lName"><br /><br />
             <label for="email">Email:</label>
-            <input type="email" name="email" ngModel><br /><br />
+            <input type="email" name="email" [(ngModel)]="registerUserData.email"><br /><br />
             <label for="password">Password:</label>
-            <input type="password" name="password" ngModel><br /><br />
-            <button routerLink="/login">Submit</button>
+            <input type="password" name="password" [(ngModel)]="registerUserData.password"><br /><br />
+            <button (click)="registerUser()">Submit</button>
         </form>
     </fieldset>
 </div>

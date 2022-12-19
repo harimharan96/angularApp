@@ -1,13 +1,14 @@
 <div class="container">
-
     <fieldset>
         <legend>Login</legend>
-        <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
+
+        <!-- <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)"> -->
+        <form>
             <label for="email">Email:</label>
-            <input type="email" name="email" ngModel><br /><br />
+            <input type="email" name="email" [(ngModel)]="loginUserData.email"><br /><br />
             <label for="password">Password:</label>
-            <input type="password" name="password" ngModel><br /><br />
-            <button>Submit</button>
+            <input type="password" name="password" [(ngModel)]="loginUserData.password"><br /><br />
+            <button (click)="loginUser()">Submit</button>
         </form>
     </fieldset>
 </div>

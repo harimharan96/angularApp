@@ -1,0 +1,17 @@
+<div class="container">
+    <ul>
+        <li *ngFor="let data of products">
+            <div class="cards">
+
+                <div class="card-image"><img src="{{data.prodImage}}" width="200" height="200" /></div>
+                <div class="card-title">{{data.prodTitle}}</div>
+                <div class="card-price">{{data.prodPrice | currency: 'INR'}}</div>
+                <div class="add-to-cart"><button class="btn btn-sm btn-primary" (click)="handleAddToCart(data)"
+                        [disabled]="!isLoggedIn">Add To
+                        Cart</button>
+                </div>
+
+            </div>
+        </li>
+    </ul>
+</div>
