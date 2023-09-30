@@ -18,6 +18,10 @@ li {
     padding: 10px;
 }
 
+button:disabled {
+    opacity: 0.1;
+}
+
 .card-title {
     margin: 7px 0;
     font-weight: 700;
